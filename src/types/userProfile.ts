@@ -1,6 +1,6 @@
-export type UserProfile = () => {
+export type UserProfile = {
   id: number;
   name: string;
-  emil: string;
+  email: string;
   address: string;
 };

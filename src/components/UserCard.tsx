@@ -1,19 +1,21 @@
 import { FC } from "react";
+import { UserProfile } from "../types/userProfile";
 
 type Props = {
-  user:
+  user: UserProfile;
 };
 
-export const UserCard: FC<Props> = () => {
+export const UserCard: FC<Props> = (props) => {
+  const { user } = props;
   return (
     <div>
       <dl>
         <dt>名前</dt>
-        <dd></dd>
+        <dd>{user.name}</dd>
         <dt>メール</dt>
-        <dd></dd>
+        <dd>{user.email}</dd>
         <dt>住所</dt>
-        <dd></dd>
+        <dd>{user.address}</dd>
       </dl>
     </div>
   );
