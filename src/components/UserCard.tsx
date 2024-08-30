@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import { UserProfile } from "../types/userProfile";
 
 type Props = {
@@ -7,8 +7,16 @@ type Props = {
 
 export const UserCard: FC<Props> = (props) => {
   const { user } = props;
+
+  const style: CSSProperties = {
+    border: "solid 1px #ccc",
+    borderRadius: "8px",
+    padding: "0 100px",
+    margin: "8px",
+    textAlign: "left",
+  };
   return (
-    <div>
+    <div style={style}>
       <dl>
         <dt>名前</dt>
         <dd>{user.name}</dd>
